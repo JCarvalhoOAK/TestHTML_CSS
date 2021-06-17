@@ -1,0 +1,147 @@
+
+            *{
+                margin: 0px;
+                padding: 0px;
+                text-decoration: none;
+                color: 505763px; 
+                outline: 0;
+                font-family: 'Open Sans', Arial, sans-serif;
+                list-style: none;
+                width: 100%;
+                float: left;
+                box-sizing: border-box;
+            }
+            .conteudo{
+                /*width: 320px;*/
+                float: none;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+            .menuMobile{
+                
+                background-image: linear-gradient(red, yellow);
+                padding: 5px 0;
+            }
+            .menuMobile label{
+                width: auto;
+                cursor:pointer;
+            }
+            .menuMobile span{
+                color: white;
+                border: 2px solid#fff;
+                width: auto;
+                padding: 5px;
+            }
+            .menuMobile img.fotoUsuario{
+                width: 32px;
+                margin-left: 25px;
+                border-radius: 50%;
+            }
+            .menuMobile .logo{
+                background: white;
+                width: 50px;
+                border-radius: 50%;
+                float: right;
+            }
+            .mainMenu{
+                background-image: linear-gradient(red, yellow);
+                /*visibility: hidden;*/
+                transition: all 0.5s linear;
+                position: absolute;
+                top: -250px;
+            }
+            .mainMenu li{
+                color: #fff;
+                padding: 15px 15px 15px 60px;
+                border-top: 1px solid #fff;
+                background-repeat: no-repeat;
+                background-size: 48px;
+                background-position: 0 center;
+
+
+            }
+            .mainMenu li:hover{
+                background-color:  yellow;
+                color: black;
+                font-style:italic;
+                text-align: center;
+            }
+            .mainMenu li.sales{
+                background-image: url('./Image/sale-icon.png');
+            }
+            .mainMenu li.courses{
+                background-image: url('./Image/courses.png');
+            }
+            .mainMenu li.register{
+                background-image: url('./Image/check.png');
+            }
+            .mainMenu li.login{
+                background-image: url('./Image/login.png');
+            }
+            .mainMenu li.out{
+                background-image: url('./Image/Log-Out-icon.png');
+            }
+            #openMenu{
+                visibility:hidden ;
+                width: 0;
+                height: 0;
+            }
+            #openMenu:checked ~ ul{
+                visibility: visible;
+                top: 42px;
+            }
+
+
+
+
+            /****************** CSS PARA TELAS ACIMA DE 425px ******************************/
+         @media screen and (min-width:425px){
+            .conteudo{
+                max-width: 425px;
+            }
+
+         }
+
+            /****************** CSS PARA TELAS ACIMA DE 640px ******************************/
+        @media screen and (min-width:640px){
+
+                .conteudo{
+                    max-width: 640px;
+                }
+                .menuMobile label{
+                    display: none;
+                }
+                .menuMobile img.fotoUsuario{
+                    float: right;
+                    width: 60px;
+                }
+                .menuMobile .logo{
+                    float: left;
+                    width: 120px;
+                }
+                .menuMobile{
+                    background: #fff;
+                    border-bottom: 1px solid #242424;
+                    padding: 10px 0;
+                }
+                .mainMenu{
+                    position: inherit;
+                    border-bottom: 1px solid #242424;
+                }
+                .mainMenu li{
+                    border-top: 0;
+                    padding: 10px 20px 5px 30px;
+                    font-size: 14px;
+                    background-size: 24px;
+                    background-position-y: 5px;
+                }
+                .mainMenu a{
+                    width: auto;
+                }
+                .mainMenu a.sair{
+                    float: right;
+
+                }
+
+
+            }       
